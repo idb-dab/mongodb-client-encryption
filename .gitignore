@@ -19,6 +19,8 @@ npm-debug.log
 deps
 *.tgz
 
+.npmrc
+
 xunit.xml
 
 # built typescript

@@ -1,5 +1,5 @@
 {
-  "name": "mongodb-client-encryption",
+  "name": "@idb-dab/mongodb-client-encryption",
   "version": "6.5.0",
   "description": "Official client encryption module for the MongoDB Node.js driver",
   "main": "lib/index.js",
@@ -10,6 +10,7 @@
     "addon",
     "lib",
     "src",
+    "scripts",
     "binding.gyp"
   ],
   "directories": {
@@ -17,7 +18,7 @@
   },
   "scripts": {
     "install:libmongocrypt": "node .github/scripts/libmongocrypt.mjs",
-    "install": "prebuild-install --runtime napi || node-gyp rebuild",
+    "install": "node ./scripts/install.js",
     "clang-format": "clang-format --style=file:.clang-format --Werror -i addon/*",
     "check:eslint": "ESLINT_USE_FLAT_CONFIG=false eslint src test",
     "check:clang-format": "clang-format --style=file:.clang-format --dry-run --Werror addon/*",
@@ -95,5 +96,8 @@
       "module": "commonjs",
       "moduleResolution": "node"
     }
+  },
+  "publishConfig": {
+    "@idb-dab:registry": "https://digital-packages-353013733335.d.codeartifact.ap-south-1.amazonaws.com/npm/digital-packages/"
   }
 }
