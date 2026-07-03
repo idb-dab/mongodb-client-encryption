@@ -26,3 +26,5 @@ lib
 prebuilds
 
 _libmongocrypt*
+
+.npmrc
